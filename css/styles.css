@@ -41,3 +41,25 @@ section:only-child {
     background-color: whitesmoke;
     color: darkslategray;
 }
+
+/* Flexbox lays out content based on their conten width. In this case, the sections are as wide as the h2 heading inside of them. Due to their default width, these sections do not grow to fit the screen width when there is more room inside the flex container
+
+Flexbox can allow flex items to grow beyond their content width to take up all the room on the row. 
+
+The default is flex-grow:0; and flex-shrink: 1;*/
+section {
+    flex-grow: 1;
+    /* flex-grow: 0; <-means no grow allowed: .
+    flex-grow: 1; <-allows to grow */
+    flex-shrink: 1;
+    /* width: calc(100%/3); */
+    /* flex-basis is the preferred width but allowing the grow and shrink to change that width */
+    flex-basis: 200px;
+
+    /* shorthand for all three properties */
+    flex: 0 1 250px;
+}
+
+section:nth-child(2) {
+    /* flex-grow: 4; */
+}
